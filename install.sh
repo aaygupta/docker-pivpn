@@ -53,7 +53,7 @@ display_help() {
 }
 
 build_setup() {
-    docker build . -t docker-pivpn:1.0
+    docker build -t docker-pivpn:1.0 .
     container="$(docker run -i -d -P --cap-add=NET_ADMIN docker-pivpn:1.0)" # check if permissons can be lowered
 }
 

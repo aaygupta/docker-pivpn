@@ -1,9 +1,9 @@
-FROM balenalib/raspberry-pi-debian:latest
+FROM debian:stretch
 
 LABEL Maintainer  = "Ankit Gupta <aaygupta@outlook.com>"
 LABEL Description = "Lightweight setup for pivpn on Raspberry Pi"
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get clean && apt-get update && apt-get install -y \
 	curl \
 	software-properties-common \
 	debconf-utils \
